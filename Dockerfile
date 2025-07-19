@@ -26,4 +26,4 @@ RUN chown -R www-data:www-data /var/www \
 EXPOSE 8000
 
 # ✅ Step 9: Serve public folder properly
-CMD ["php", "-S", "0.0.0.0:8000", "-t", "public"]
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
