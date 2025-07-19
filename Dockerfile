@@ -25,5 +25,5 @@ RUN chown -R www-data:www-data /var/www \
 # Step 8: Expose port (Render uses this)
 EXPOSE 8000
 
-# Step 9: Start Laravel
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+# ✅ Step 9: Serve public folder properly
+CMD ["php", "-S", "0.0.0.0:8000", "-t", "public"]
